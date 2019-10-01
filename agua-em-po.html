@@ -1,0 +1,62 @@
+<!DOCYTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>Venda de tralhas</title>
+	
+	<link rel="stylesheet"  href="_css/estilo.css"/>
+	<link rel="stylesheet" href="_css/specs.css"/>
+	
+	</head>
+<script language="javascript" src="_javascript/funcoes.js"></script>
+
+
+<body onload="cadastrar()">
+<div id="interface">
+
+	<header id="cabecalho">
+
+	<hgroup>
+	<h1>Tralha a vista</h1>
+	<h2>A loja que vende suas tralhas</h2>
+	</hgrouop>
+
+	<img id="icone" src="_imagens\especificacoes.png"/>
+
+<nav id="menu">
+		<h1>Menu Principal</h1>
+	<ul>
+		<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="index.html">Home</a></li>
+		<li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="pesquisa.html">Pesquisa</a></li>
+		<a id="lnkLogin" href="#" onclick="irLogin()"><li id="login" onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"></li></a>
+
+	</ul>
+</nav>
+	</header>
+
+<section id="corpo-full">
+	<article id="descricao agua">
+		<header id="cabecalho-artigo">
+			<h1>Dados do produto</h1>
+		</header>
+	
+		Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.
+
+		<section id="conteudo">
+			<img src="_imagens/galeria-01.jpg">
+			<iframe src="descricao.html#agua" name="janela" id="frame-spec" scrolling="no"></iframe>
+		</section>
+	
+	</article>	
+	
+</section>
+
+<footer id="rodape">
+<a href="http://facebook.com/" target="_blank">Facebook</a> | 
+<a href="http://twitter.com" target="_blank">Twitter</a></p>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCYTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>Venda de tralhas</title>
+	
+	<link rel="stylesheet"  href="_css\estilo.css"/>
+	<link rel="stylesheet"  href="_css\form.css"/>
+	<script src="_js/jquery-3.2.1.min.js"></script>
+	
+	</head>
+			<script language="javascript" src="_javascript/funcoes.js"></script>
+			<script>
+				function calc_total() {
+					var qtd = parseInt(document.getElementById('cQtd').value);
+					tot =  qtd * 1500;
+					document.getElementById('cTot').value= tot;
+				}
+			</script>
+			
+
+<body onload="cadastrar()">
+<div id="interface">
+
+	<header id="cabecalho">
+
+	<hgroup>	
+		<h1>Tralha a vista</h1>
+		<h2>A loja que vende suas tralhas</h2>
+	</hgroup>
+
+	<img id="icone" src="_imagens\contato.png"/>
+
+		
+<nav id="menu">
+		<h1>Menu Principal</h1>
+	<ul>
+		<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+		<li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="pesquisa.html">Pesquisar</a></li>
+		<a id="lnkLogin" href="#" onclick="irLogin()"><li id="login" onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"></li></a>
+
+	</ul>
+</nav>
+	</header>
+
+<section id="corpo-full">
+	<article id="noticia-principal">
+		<header id="cabecalho-artigo">
+			<hgroup>
+				<h1>Formulário de Cadastro</h1>
+				<h3 class="direita">Atualizado em 01/Outubro/2019</h3>
+			</hgroup>
+		</header>
+
+<form method="post" id="fContato" action="" oninput="calc_total();">
+	<fieldset id="usuario"><legend>
+		Identificação do Usuário</legend>
+		<p>Nome: <input type="text" name="tNome" id="cNome" size="30" maxlength="35" placeholder="Nome Completo" /></p>
+		<p>E-mail: <input type="email" name="tMail" id="cMail" size="30" maxlength="40" placeholder="E-mail" /></p>
+		<p>Senha: <input type="password" name="tSenha" id="cSenha" size="10" maxlength="8" placeholder="Senha" /></p>
+		<fieldset id="sexo"><legend>Sexo:</legend>
+			<input type="radio" name="tSexo" id="cMasc"  /> <label for="cMasc">Masculino</label><br/>
+			<input type="radio" name="tSexo" id="cFem"  /> <label for="cFem">Feminino</label>
+			</fieldset>
+		<p>Data de Nascimento: <input type="date" name="tNasc" id="cNasc" /></p>
+		</fieldset>
+
+		<fieldset id="endereco"><legend>
+		Endereço do Usuário</legend>
+		<p><label for="cRua">Logradouro: </label><input type="text" name="tRua" id="cRua" size="30" maxlength="80" placeholder="Endereço Completo" /></p>
+		<p><label for="cNum"> Número: </label><input type="Number" name="tNum" id="cNum" min="0" max="9999" placeholder="Número" /></p>
+		<p><label for="cEst"> Estado: </label><select name="tEst" id="cEst">
+												<option value"RJ">Rio de Janeiro</option>
+												<option value"SP">São Paulo</option>
+												<option value"MG">Minas Gerais</option>
+												<option value"PR">Parana</option>
+												<option value"RS">Rio Grande do Sul</option>
+										</select> </p>
+		<p><label for="cCid"> Cidade: </label>
+		<input type="text" name="tCid" id="cCid" size="30" maxlength="40" placeholder="Cidade" /></p>
+			
+		</fieldset>
+		
+		<input type="button" name="tEnviar" src="_imagens/botao-enviar.png" onclick="redirectPage()" value="Cadastrar"/>
+		
+		<!--<div id="result"></div> -->
+		<script>			
+				$("#fContato").submit(function(event) {
+					loged();
+				});
+					// Stop form from submitting normally
+						
+		/*			  // Get some values from elements on the page:
+					  var $form = $( this ),
+					//term = $form.find( "input[name='s']" ).val(),
+						url = $form.attr( "action" );
+					 
+					  // Send the data using post
+					  var posting = $.post( url, $form.serialize());
+					 
+					  // Put the results in a div
+					  posting.done(function( data ) {
+						//var content = $( data ).find( "#content" );
+						$( "#result" ).empty().append( data );
+					  });
+				});				*/
+			</script>
+
+</form>
+
+</article>
+</section>
+
+<footer id="rodape">
+<a href="http://facebook.com/" target="_blank">Facebook</a> | 
+<a href="http://twitter.com" target="_blank">Twitter</a></p>
+</footer>
+</div>
+</body>
+</html>
