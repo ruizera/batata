@@ -3,7 +3,7 @@ function mudaFoto (foto) {
 	 
 	 }
 	 
-
+ 
 	 isLoged = localStorage.getItem("logaed");
 function redirectPage(){
 		loged();
